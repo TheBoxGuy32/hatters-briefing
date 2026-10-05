@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hatters Briefing: review of Sun 13 Sep</title><style>.archived{background:var(--ink,#101A2E);color:var(--paper,#F7F5F0);font:13px/1.5 'IBM Plex Mono','SF Mono',Menlo,monospace;padding:10px 16px;}.archived a{color:inherit;}.archived .corr{display:block;margin-top:4px;}</style></head><body>
+<div class="archived" role="note">Archived edition · Review · compiled Sun 13 Sep 2026. This page is kept as it was published. <a href="../">Go to the latest edition</a></div>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --paper: #F7F5F0; --paper-2: #EEEBE3; --ink: #101A2E; --ink-2: #4A5468; --ink-3: #7D8597;
+    --rule: #C9C4B8; --rule-soft: #DEDAD0; --band: #002D62; --band-2: #00234D; --band-ink: #F7F5F0; --band-ink-2: #B9C6DB;
+    --accent: #F78F1E; --accent-ink: #101A2E; --accent-soft: rgba(247,143,30,0.14);
+    --viz-luton: #F78F1E; --viz-opp: #2a78d6; --viz-other: #B9B4A8; --viz-grid: #E4E0D6; --viz-base: #B9B4A8;
+    --tip-bg: #101A2E; --tip-ink: #F7F5F0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0E1320; --paper-2: #141B2C; --ink: #EDE9E0; --ink-2: #B6BCCB; --ink-3: #7F8799;
+      --rule: #2C3549; --rule-soft: #1F2739; --band: #00214A; --band-2: #001A3B; --band-ink: #EDE9E0; --band-ink-2: #9FB0CC;
+      --accent: #FFA640; --accent-ink: #0E1320; --accent-soft: rgba(255,166,64,0.16);
+      --viz-luton: #D27414; --viz-opp: #3987e5; --viz-other: #4A5468; --viz-grid: #222B3D; --viz-base: #4A5468;
+      --tip-bg: #EDE9E0; --tip-ink: #0E1320;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E1320; --paper-2: #141B2C; --ink: #EDE9E0; --ink-2: #B6BCCB; --ink-3: #7F8799;
+    --rule: #2C3549; --rule-soft: #1F2739; --band: #00214A; --band-2: #001A3B; --band-ink: #EDE9E0; --band-ink-2: #9FB0CC;
+    --accent: #FFA640; --accent-ink: #0E1320; --accent-soft: rgba(255,166,64,0.16);
+    --viz-luton: #D27414; --viz-opp: #3987e5; --viz-other: #4A5468; --viz-grid: #222B3D; --viz-base: #4A5468;
+    --tip-bg: #EDE9E0; --tip-ink: #0E1320;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 56px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Source Serif 4", Georgia, "Times New Roman", serif; font-size: 17px; line-height: 1.55; }
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, [tabindex]:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 40px); }
+
+  /* masthead + nav */
+  .masthead { background: var(--band); color: var(--band-ink); }
+  .masthead-inner { display: grid; grid-template-columns: 1fr auto; gap: 12px 24px; align-items: end; padding: 26px 0 18px; }
+  .kicker { font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; text-transform: uppercase; letter-spacing: .14em; font-size: 12px; color: var(--band-ink-2); margin: 0 0 6px; }
+  .masthead h1 { font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .02em; font-size: clamp(34px, 5vw, 52px); line-height: 1; margin: 0; text-wrap: balance; }
+  .masthead h1 span { color: var(--accent); }
+  .stamp { font-family: "IBM Plex Mono", "SF Mono", Menlo, monospace; font-size: 12px; line-height: 1.5; color: var(--band-ink-2); text-align: right; }
+  .stamp b { color: var(--band-ink); font-weight: 500; }
+  nav.top { position: sticky; top: 0; z-index: 20; background: var(--band-2); border-bottom: 3px solid var(--accent); }
+  nav.top ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 0; scrollbar-width: none; }
+  nav.top ul::-webkit-scrollbar { display: none; }
+  nav.top a { display: block; padding: 11px 14px; font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; text-transform: uppercase; letter-spacing: .12em; font-size: 12.5px; font-weight: 600; color: var(--band-ink-2); text-decoration: none; white-space: nowrap; border-bottom: 3px solid transparent; margin-bottom: -3px; }
+  nav.top a:hover, nav.top a.active { color: var(--band-ink); border-bottom-color: var(--accent); }
+
+  /* sections */
+  .notice { margin: 24px 0 8px; padding: 12px 16px; border-left: 4px solid var(--accent); background: var(--accent-soft); font-size: 15.5px; max-width: 90ch; }
+  .notice p { margin: 0; } .notice p + p { margin-top: 6px; }
+  section.sheet { border-top: 1px solid var(--rule); padding: 16px 0 30px; margin: 18px 0 0; }
+  section.sheet:last-of-type { border-bottom: 1px solid var(--rule); }
+  .label { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; text-transform: uppercase; letter-spacing: .12em; font-size: 13px; font-weight: 600; color: var(--ink); margin: 0 0 14px; }
+  .label small { font-family: "IBM Plex Mono", "SF Mono", Menlo, monospace; text-transform: none; letter-spacing: 0; font-weight: 400; font-size: 12px; color: var(--ink-3); }
+  h3 { font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; font-weight: 600; font-size: 19px; letter-spacing: .01em; margin: 0 0 6px; text-wrap: balance; }
+  p { margin: 0 0 12px; max-width: 68ch; }
+  .muted { color: var(--ink-2); } .small { font-size: 15px; }
+  .grid { display: grid; gap: 22px clamp(24px, 3vw, 48px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); align-items: start; }
+  .grid-wide { grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); }
+  .block { break-inside: avoid; }
+  .block p:last-child { margin-bottom: 0; }
+  .facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px 20px; margin: 0; font-size: 15.5px; }
+  .facts dt { font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; text-transform: uppercase; letter-spacing: .1em; font-size: 12px; color: var(--ink-3); padding-top: 3px; }
+  .facts dd { margin: 0; max-width: 62ch; }
+
+  /* tables */
+  .tablewrap { overflow-x: auto; margin: 4px 0 12px; }
+  table { border-collapse: collapse; width: 100%; font-family: "IBM Plex Mono", "SF Mono", Menlo, monospace; font-size: 13px; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--rule-soft); white-space: nowrap; }
+  th { font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; text-transform: uppercase; letter-spacing: .1em; font-size: 11.5px; font-weight: 600; color: var(--ink-3); border-bottom: 1px solid var(--rule); }
+  td.num, th.num { text-align: right; }
+  tr.luton td { background: var(--accent-soft); font-weight: 500; }
+  tr.opp td { box-shadow: inset 3px 0 0 var(--viz-opp); }
+
+  /* KPI tiles */
+  .kpis { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); margin: 0 0 8px; }
+  .kpi { border-top: 3px solid var(--accent); background: var(--paper-2); padding: 12px 14px 14px; }
+  .kpi-label { font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; text-transform: uppercase; letter-spacing: .1em; font-size: 11.5px; color: var(--ink-3); }
+  .kpi-value { font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; font-weight: 700; font-size: 44px; line-height: 1.05; margin: 6px 0 4px; }
+  .kpi-note { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+
+  /* figures + SVG charts */
+  figure.fig { margin: 0; }
+  figure.fig figcaption { margin: 0 0 8px; }
+  figure.fig figcaption b { font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; font-weight: 600; font-size: 17px; display: block; }
+  figure.fig figcaption span { font-size: 14px; color: var(--ink-2); }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; font-family: "IBM Plex Mono", "SF Mono", Menlo, monospace; font-size: 12px; color: var(--ink-2); margin: 6px 0 0; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; vertical-align: -1px; margin-right: 6px; }
+  .legend i.luton { background: var(--viz-luton); } .legend i.opp { background: var(--viz-opp); } .legend i.other { background: var(--viz-other); }
+  .legend i.exp { background: var(--paper); box-shadow: inset 0 0 0 2px var(--viz-other); }
+  svg.viz { width: 100%; height: auto; display: block; font-family: "IBM Plex Mono", "SF Mono", Menlo, monospace; }
+  svg.viz .grid { stroke: var(--viz-grid); stroke-width: 1; }
+  svg.viz .mean { stroke: var(--viz-base); stroke-width: 1; }
+  svg.viz .base { stroke: var(--ink-3); stroke-width: 1; }
+  svg.viz .tick { fill: var(--ink-3); font-size: 11px; }
+  svg.viz .axis { fill: var(--ink-2); font-size: 11.5px; font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; letter-spacing: .06em; text-transform: uppercase; }
+  svg.viz .note { fill: var(--ink-3); font-size: 11px; font-style: italic; font-family: "Source Serif 4", Georgia, serif; }
+  svg.viz .lbl { fill: var(--ink); font-size: 12px; font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; }
+  svg.viz .lbl.luton, svg.viz .lbl.opp { font-weight: 700; }
+  svg.viz .rowlbl { fill: var(--ink-2); font-size: 11.5px; } svg.viz .rowlbl.luton, svg.viz .rowlbl.opp { fill: var(--ink); font-weight: 500; }
+  svg.viz .val { fill: var(--ink); font-size: 11px; }
+  svg.viz .hit { fill: transparent; pointer-events: all; }
+  svg.viz .dot { stroke: var(--paper); stroke-width: 2; }
+  svg.viz .pt.other .dot { fill: var(--viz-other); } svg.viz .pt.luton .dot { fill: var(--viz-luton); } svg.viz .pt.opp .dot { fill: var(--viz-opp); }
+  svg.viz .bar.other { fill: var(--viz-other); } svg.viz .bar.luton { fill: var(--viz-luton); } svg.viz .bar.opp { fill: var(--viz-opp); }
+  svg.viz .db-line { stroke: var(--viz-base); stroke-width: 2; }
+  svg.viz .db-exp { fill: var(--paper); stroke: var(--viz-other); stroke-width: 2; }
+  svg.viz .db-act { stroke: var(--paper); stroke-width: 2; } svg.viz .db-act.luton { fill: var(--viz-luton); } svg.viz .db-act.opp { fill: var(--viz-opp); }
+  svg.viz g[data-tip]:hover .dot, svg.viz g[data-tip]:focus .dot, svg.viz g[data-tip]:hover .bar, svg.viz g[data-tip]:focus .bar, svg.viz g[data-tip]:hover .db-act, svg.viz g[data-tip]:focus .db-act { filter: brightness(1.15); stroke: var(--ink); }
+  svg.viz g[data-tip] { outline: none; cursor: default; }
+  details.tw { margin: 8px 0 0; font-size: 13px; }
+  details.tw summary { cursor: pointer; font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; text-transform: uppercase; letter-spacing: .1em; font-size: 11.5px; color: var(--ink-3); }
+  details.tw table { margin-top: 6px; }
+  .tip { position: fixed; z-index: 30; pointer-events: none; background: var(--tip-bg); color: var(--tip-ink); font-family: "IBM Plex Mono", "SF Mono", Menlo, monospace; font-size: 12px; line-height: 1.4; padding: 6px 9px; max-width: 300px; opacity: 0; transition: opacity .12s; }
+  .tip.on { opacity: 1; }
+  .sample { max-width: 100%; height: auto; border: 1px solid var(--rule-soft); display: block; }
+
+  /* players + talk */
+  .players { display: grid; gap: 0; }
+  .player { display: grid; grid-template-columns: 12ch 1fr; gap: 4px 18px; padding: 12px 0; border-top: 1px solid var(--rule-soft); }
+  .player:first-child { border-top: 0; padding-top: 4px; }
+  .player .who { font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; font-weight: 600; font-size: 16px; line-height: 1.25; }
+  .player .who .pos { display: block; font-family: "IBM Plex Mono", "SF Mono", Menlo, monospace; font-weight: 400; font-size: 11.5px; color: var(--ink-3); letter-spacing: .06em; }
+  .player p { margin: 0 0 6px; font-size: 15.5px; }
+  .talk { list-style: none; padding: 0; margin: 0; counter-reset: tp; }
+  .talk li { padding: 8px 0 8px 2.2em; position: relative; border-top: 1px solid var(--rule-soft); max-width: 78ch; }
+  .talk li:first-child { border-top: 0; }
+  .talk li::before { counter-increment: tp; content: counter(tp, upper-roman); position: absolute; left: 0; top: 9px; font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif; font-weight: 700; color: var(--accent); }
+  footer { font-family: "IBM Plex Mono", "SF Mono", Menlo, monospace; font-size: 12px; color: var(--ink-3); line-height: 1.7; padding: 16px 0 40px; }
+  @media (max-width: 560px) {
+    .masthead-inner { grid-template-columns: 1fr; align-items: start; } .stamp { text-align: left; }
+    .facts { grid-template-columns: 1fr; gap: 2px 0; } .facts dd { margin-bottom: 8px; }
+    .player { grid-template-columns: 1fr; } .kpi-value { font-size: 36px; }
+  }
+</style>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <div>
+      <p class="kicker">Luton Town · Sky Bet League One · 2026–27</p>
+      <h1>Hatters <span>Briefing</span></h1>
+    </div>
+    <div class="stamp">
+      <b>Compiled</b> Sun 13 Sep 2026 · 4th edition<br>
+      Review · no match played this weekend · charts re-run, unchanged<br>
+      Next run: Preview, Thu 17 Sep 01:05 UK
+    </div>
+  </div>
+</header>
+<nav class="top" aria-label="Sections"><div class="wrap"><ul>
+  <li><a href="#stand">Where things stand</a></li>
+  <li><a href="#last">Last match</a></li>
+  <li><a href="#next">Next up</a></li>
+  <li><a href="#matchup">The matchup in numbers</a></li>
+  <li><a href="#tracker">Squad tracker</a></li>
+  <li><a href="#season">Season state</a></li>
+  <li><a href="#players">Player watch</a></li>
+  <li><a href="#talk">Talking points</a></li>
+  <li><a href="#beyond">Beyond free data</a></li>
+</ul></div></nav>
+
+<main class="wrap">
+  <div class="notice">
+    <p><strong>Sunday review, and there was nothing to review.</strong> Luton did not play on the weekend of 12–13 September: the Stevenage game was a Thursday Sky pick, and the next match is Bradford City on Saturday the 19th. That leaves a nine-day gap straddling this run. The deep review of Stevenage below was written on 11 September and is reproduced unchanged, because nothing has happened since to change it — no new match, no new data, and no further beat reporting beyond the Friday round of match reaction already cited.</p>
+    <p><strong>What was checked today and did not move.</strong> The results file is still current through 10 September and the charts were regenerated from it — every figure on this page is identical to Friday's, which is the point of re-running them rather than assuming. <strong>Jack Wilshere (manager)</strong> has still had no FA charge or ban length announced, three days after his dismissal at Stevenage, so his availability for Saturday remains unconfirmed. No update has been published on <strong>Jordan Clark (CM)</strong> since Wilshere spoke on 9 September. The Thursday run does the full Bradford preview, with team news that should by then exist.</p>
+  </div>
+
+  <section class="sheet" id="stand">
+    <p class="label">Where things stand <small>league position · last result · availability</small></p>
+    <div class="grid grid-wide">
+      <dl class="facts">
+        <dt>Position</dt><dd><strong>8th</strong> in League One — 8 points from 6 games (2W 2D 2L), 12 scored, 13 conceded, goal difference −1. One game more played than most of the division.</dd>
+        <dt>Last out</dt><dd>Stevenage 2–1 Luton, Thursday 10 Sep, away. A Sky pick, 20:00 — and still the last match played, nine days before the next one.</dd>
+        <dt>The season's number</dt><dd>Luton have conceded <strong>6.4 goals more than their expected goals against</strong> — the largest such gap of any club in the division. Their xG difference, meanwhile, is among the division's best. The process is a promotion side's; the results are mid-table.</dd>
+        <dt>Unavailable</dt><dd><strong>Jordan Clark (CM)</strong> — broken jaw, sustained 22 Aug v Notts County. Back in non-contact training since around 30 Aug and progressed from running to ball work; waiting on a protective mask. Jack Wilshere, speaking on 9 Sep, did not expect it to be much longer. No return date given.</dd>
+        <dt>Touchline</dt><dd><strong>Jack Wilshere (manager)</strong> was dismissed from the technical area on 24 minutes at Stevenage and watched the rest from the dressing room. <strong>Chris Powell (assistant manager)</strong> took the post-match media duty and said Wilshere had apologised to staff and players. Re-checked on 13 Sep: still no FA charge or ban length announced, three days on. Treat his availability for Bradford as unconfirmed — and note that a touchline dismissal is an administrative process with its own timetable, so silence at this stage is normal rather than informative.</dd>
+        <dt>Schedule</dt><dd><strong>Two league fixtures postponed.</strong> Huddersfield away (26 Sep) and Doncaster at home (3 Oct) are off, announced by the club on 7 Sep, for international call-ups. Luton have not named the players involved. The two EFL Trophy ties either side of them go ahead.</dd>
+        <dt>EFL Trophy</dt><dd>Ipswich Town U21 at home, Tuesday 22 Sep, 19:00 — a group tie against an under-21 side, noted here and not previewed.</dd>
+      </dl>
+      <div>
+        <!-- block:KPIS --><div class="kpis">
+<div class="kpi"><div class="kpi-label">Luton goals conceded before half-time</div><div class="kpi-value">9 of 13</div><div class="kpi-note">Scored 3 of 12 before half-time. Led at the break in 0 of 6 games.</div></div>
+<div class="kpi"><div class="kpi-label">Share of on-target shots that beat Luton</div><div class="kpi-value">57%</div><div class="kpi-note">League average 37%. Rank 24 of 24.</div></div>
+<div class="kpi"><div class="kpi-label">Bradford City expected goals conceded per game</div><div class="kpi-value">0.91</div><div class="kpi-note">Rank 1 of 24 in League One. They allow 9.6 shots a game, rank 2.</div></div>
+<div class="kpi"><div class="kpi-label">Bradford City corners won per game</div><div class="kpi-value">7.6</div><div class="kpi-note">Rank 2 of 24. Luton concede 4.0 corners a game, rank 4 of 24.</div></div>
+</div><!-- /block:KPIS -->
+        <p class="muted small" style="margin-top:10px">Four numbers that frame the Bradford game. Team-level data from football-data.co.uk through <!-- block:DATA_DATE -->10 Sep 2026<!-- /block:DATA_DATE -->; ranks are out of 24 clubs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet" id="last">
+    <p class="label">Last match <small>Stevenage 2–1 Luton · 10 Sep · Lamex Stadium</small></p>
+    <div class="grid">
+      <div class="block">
+        <h3>Eighty per cent of the ball and two shots on target</h3>
+        <p>The scoreline says a narrow away defeat. The shot profile says something worse, and more specific. Luton had ten shots and put two on target, for <strong>0.83 expected goals</strong> — their lowest of the season by some distance, and less than half what they generated at home to Leyton Orient five days earlier. Per Luton Today's account they held over 70% of the ball in the first half and touched 80% at one stage in the second. That is not a side being kept out. That is a side circulating the ball in front of an opponent who was content to let them.</p>
+        <p>The number that matters is not the possession or even the xG total but the ratio underneath it: 0.083 expected goals per shot, the worst rate Luton have managed in any match this season. When they do create, they create decent chances — their season figure of 0.12 xG per shot ranks 7th in the division. At Stevenage they were taking whatever was available from wherever they happened to be. Eighty per cent of the ball and no idea what to do with it is a harder problem to fix than being pressed off the pitch, because it isn't a shape failure you can point at on video.</p>
+      </div>
+      <div class="block">
+        <h3>Both goals went through the goalkeeper</h3>
+        <p>Stevenage scored twice from nine shots and 1.28 xG. Neither goal was a good chance by the model's reckoning, and both had <strong>Josh Keeley (GK)</strong> in them. Dan Kemp's opener on 23 minutes was struck from 22 yards and, per Luton Today, burst through Keeley's hands. The second on 70 came from a Ben Broggio cross that deflected off Keeley and struck Josh Magennis — who looked offside — before rebounding in. The beat also flagged a rash clearance on 28 minutes that Keeley misjudged as it bounced over him.</p>
+        <p><strong>Mads Andersen (CB)</strong> got one back on 75, and that too was a deflection: a Kasey Palmer (AM) volley struck Andersen and wrongfooted the Stevenage goalkeeper. Three goals in the match, and on the available accounts none of them was cleanly struck past a set goalkeeper.</p>
+        <p>Luton Today's ratings, published on 11 Sep, put <strong>Keeley</strong> at 3 out of 10 and made the criticism more specific than "he was at fault": that he struggled with shots from distance, <em>particularly to his right</em>, and that the rush from goal was a poor decision rather than bad luck. A directional weakness named by someone who watched it is a different class of evidence from a season-long gap in a spreadsheet, and it is the kind of claim a club's own data would confirm or kill in an afternoon.</p>
+        <p>The rest of the card is worth noting for what it says about the team, not the goalkeeper. Andersen was named star of the match — with a 5. <strong>Hakeem Odoffin (CB)</strong> got 3.5, beaten repeatedly by Stevenage's wide players; <strong>Izzy Jones (LB)</strong> 4.5, lively early and unwilling to commit when the chances came. A beat writer who hands out a 5 as his highest mark is describing a flat night, not an unlucky one.</p>
+      </div>
+      <div class="block">
+        <h3>What the numbers cannot settle</h3>
+        <p>This is the sixth game of evidence on the season's central question, and it is the first that points somewhere specific. Across six games Luton have conceded 13 on 6.6 xGA. On the night, the goalkeeper was directly implicated in both concessions. The temptation is to close the case.</p>
+        <p>Resist it, for a reason worth being precise about: <strong>the data cannot distinguish between a goalkeeper conceding more than he should and opponents striking the ball better than average.</strong> Expected goals measures the chance at the moment of the shot — position, angle, situation. It knows nothing about where the shot ended up. The metric that would settle this is post-shot expected goals, which weights a shot by where it crossed the line, and it is not in the free data. A 22-yard strike into a top corner and a 22-yard strike at the goalkeeper's midriff carry identical xG. Only one is a goalkeeping error.</p>
+        <p>So what we have is a large gap, six games long, and beat reporting that repeatedly puts Keeley at the centre of it. That is suggestive. It is not proof, and anyone presenting it as proof is over-reading a free dataset.</p>
+        <p>One thing did move this week, though. A directional observation — beaten to his right from distance — is falsifiable in a way the aggregate is not. If it is a real technical flaw, opponents will keep testing that side and it will show up again within a handful of matches. If it was one bad night described in hindsight, it will not. That is a cheaper test than waiting for the goals-minus-xGA gap to regress, and it is the thing to watch on Saturday rather than the scoreline.</p>
+      </div>
+      <div class="block">
+        <h3>The shape, and the bench</h3>
+        <p>Wilshere made three changes again — the rotation rate the brief has been tracking holds. <strong>Joe Johnson</strong> took his first league start; <strong>Dan Gore (CM)</strong> and <strong>Callum Marshall (CF)</strong> returned. <strong>Nahki Wells (CF)</strong> and Jake Richards began on the bench. Kodua and Donley came off on 58 for Palmer and Richards; Marshall made way for Wells on 66. Luton's goal arrived nine minutes after the second of those changes, from the man introduced in the first.</p>
+        <p>The sequencing is the interesting part. The attack did not start generating until the bench emptied, and the manager who would normally be driving that from the touchline had been in the stands since the 24th minute. Wilshere was sent off for objecting to a non-call on <strong>Liam Walsh (CM)</strong> in the buildup to Kemp's goal — Powell's account, given on 11 Sep, is that Daniel Phillips had Walsh's shirt as he pressed him, that the whole ground expected the whistle, and that the referee, Andrew Humphries, disagreed and then dismissed the protest. Powell called both that and the Magennis offside blatant, and used the occasion to argue for VAR in League One, which tells you how the club is choosing to frame the week. How much a manager in the stand costs a team is unmeasurable, and worth flagging as unmeasurable rather than quietly folded into the analysis. But the game's shape did change after Luton finally changed it, later than they might have.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet" id="next">
+    <p class="label">Next up <small>Bradford City (h) · Sat 19 Sep · 15:00 UK</small></p>
+    <div class="grid">
+      <div class="block">
+        <p>Bradford arrive 5th, with nine points from five, and a profile that is the precise inverse of Luton's. <strong>They concede 0.91 expected goals a game — the best defensive process in the division, ranked 1st of 24.</strong> They also create very little: 1.24 xG a game ranks 16th, and they have scored five goals in five matches while underperforming their own xG by 1.2. Three of their wins have been of the 1–0, 2–0 variety. This is a side that wins by not letting anything happen.</p>
+        <p>The postponements load the fixture. With no league game on 26 Sep or 3 Oct, Saturday is Luton's only league match in a twenty-one-day stretch, and whatever it produces will sit on the table until 10 October. Two things decide it, and the Thursday run will take them apart properly:</p>
+      </div>
+      <div class="block">
+        <p><strong>One: can Luton's home creation get through the division's tightest defence?</strong> At Kenilworth Road, Luton generate 1.85 xG a game and concede 0.73. Bradford's away numbers are much thinner than their home ones — 0.76 xG for and 1.26 against in two away games. Both sides' better trait meets the other's, and the two-game sample on Bradford's travels is far too small to lean on.</p>
+        <p><strong>Two: does the conceding problem exist at home?</strong> On the evidence, barely. Luton's goals-conceded-over-xGA gap is +5.6 in three away games and +0.8 in three at home. If the Bradford game is the low-event grind their profile predicts, the margin is one goal either way — which is exactly the kind of game the season's variance has been deciding.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet" id="matchup">
+    <p class="label">The matchup in numbers <small>Luton's tendencies against Bradford's · team-level data through <!-- block:DATA_DATE -->10 Sep 2026<!-- /block:DATA_DATE --></small></p>
+    <div class="grid grid-wide">
+      <div class="block">
+        <h3>Where every team sits, and why these two are opposites</h3>
+        <p>Each dot is a League One club, placed by how many chances it creates and how many it allows, per game. Luton sit in the creating-plenty half of the chart with a respectable defensive record. Bradford sit at the very top on suppression and in the bottom third on creation. Their game is a straight collision between Luton's willingness to generate and Bradford's refusal to allow.</p>
+        <p>Read the horizontal position with the sample in mind. Bradford's 1.24 xG a game is not thin by accident: they take twelve shots a match, sixteenth in the league, and the chances they take are ordinary ones, 0.10 xG per shot against a league norm of 0.11. They have scored five in five and the model says they should have scored six. Nothing in the attacking column suggests a side that will overwhelm Luton. The threat, if it comes, comes from somewhere else, and the next chart says where.</p>
+      </div>
+      <figure class="fig">
+        <figcaption><b>Chance creation against chance suppression</b><span>Non-penalty figures unavailable; all shots included. Hairlines mark the league average. Hover or tab to a dot for the club's numbers.</span></figcaption>
+        <!-- block:SCATTER --><svg class="viz" viewBox="0 0 640 440" role="img" aria-labelledby="t-scatter" xmlns="http://www.w3.org/2000/svg">
+<title id="t-scatter">Chance creation against chance suppression, every League One team</title>
+<line class="grid" x1="52" x2="620" y1="16.0" y2="16.0"/>
+<text class="tick" x="44" y="20.0" text-anchor="end">0.5</text>
+<line class="grid" x1="52" x2="620" y1="111.0" y2="111.0"/>
+<text class="tick" x="44" y="115.0" text-anchor="end">1.0</text>
+<line class="grid" x1="52" x2="620" y1="206.0" y2="206.0"/>
+<text class="tick" x="44" y="210.0" text-anchor="end">1.5</text>
+<line class="grid" x1="52" x2="620" y1="301.0" y2="301.0"/>
+<text class="tick" x="44" y="305.0" text-anchor="end">2.0</text>
+<line class="grid" x1="52" x2="620" y1="396.0" y2="396.0"/>
+<text class="tick" x="44" y="400.0" text-anchor="end">2.5</text>
+<line class="grid" y1="16" y2="396" x1="165.6" x2="165.6"/>
+<text class="tick" x="165.6" y="412" text-anchor="middle">1.0</text>
+<line class="grid" y1="16" y2="396" x1="307.6" x2="307.6"/>
+<text class="tick" x="307.6" y="412" text-anchor="middle">1.5</text>
+<line class="grid" y1="16" y2="396" x1="449.6" x2="449.6"/>
+<text class="tick" x="449.6" y="412" text-anchor="middle">2.0</text>
+<line class="grid" y1="16" y2="396" x1="591.6" x2="591.6"/>
+<text class="tick" x="591.6" y="412" text-anchor="middle">2.5</text>
+<line class="mean" x1="292.4" x2="292.4" y1="16" y2="396"/>
+<line class="mean" y1="195.1" y2="195.1" x1="52" x2="620"/>
+<text class="axis" x="336" y="434" text-anchor="middle">Expected goals FOR per game  →  create more</text>
+<text class="axis" transform="translate(14 206) rotate(-90)" text-anchor="middle">Expected goals AGAINST per game  →  concede less</text>
+<text class="note" x="616" y="30" text-anchor="end">top right = good at both</text>
+<g class="pt other" tabindex="0" data-tip="AFC Wimbledon: 0.80 xG for, 1.29 xG against per game (5 games)"><circle class="hit" cx="109.4" cy="166.9" r="14"/><circle class="dot" cx="109.4" cy="166.9" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="Barnsley: 1.48 xG for, 1.48 xG against per game (5 games)"><circle class="hit" cx="301.9" cy="202.6" r="14"/><circle class="dot" cx="301.9" cy="202.6" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="Blackpool: 1.84 xG for, 2.33 xG against per game (5 games)"><circle class="hit" cx="404.7" cy="364.1" r="14"/><circle class="dot" cx="404.7" cy="364.1" r="5"/></g>
+<text class="lbl other" x="414.7" y="368.1" text-anchor="start">Blackpool</text>
+<g class="pt other" tabindex="0" data-tip="Bromley: 0.88 xG for, 1.85 xG against per game (5 games)"><circle class="hit" cx="131.0" cy="271.7" r="14"/><circle class="dot" cx="131.0" cy="271.7" r="5"/></g>
+<text class="lbl other" x="141.0" y="263.7" text-anchor="start">Bromley</text>
+<g class="pt other" tabindex="0" data-tip="Burton: 1.00 xG for, 1.25 xG against per game (5 games)"><circle class="hit" cx="165.6" cy="157.7" r="14"/><circle class="dot" cx="165.6" cy="157.7" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="Cambridge: 1.05 xG for, 1.79 xG against per game (5 games)"><circle class="hit" cx="179.2" cy="260.7" r="14"/><circle class="dot" cx="179.2" cy="260.7" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="Doncaster: 1.32 xG for, 1.10 xG against per game (5 games)"><circle class="hit" cx="255.9" cy="130.0" r="14"/><circle class="dot" cx="255.9" cy="130.0" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="Huddersfield: 1.95 xG for, 1.05 xG against per game (5 games)"><circle class="hit" cx="436.0" cy="119.7" r="14"/><circle class="dot" cx="436.0" cy="119.7" r="5"/></g>
+<text class="lbl other" x="446.0" y="133.7" text-anchor="start">Huddersfield</text>
+<g class="pt other" tabindex="0" data-tip="Leicester: 1.24 xG for, 1.40 xG against per game (5 games)"><circle class="hit" cx="233.2" cy="187.0" r="14"/><circle class="dot" cx="233.2" cy="187.0" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="Leyton Orient: 1.07 xG for, 1.77 xG against per game (5 games)"><circle class="hit" cx="184.3" cy="258.1" r="14"/><circle class="dot" cx="184.3" cy="258.1" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="Mansfield: 1.14 xG for, 1.53 xG against per game (5 games)"><circle class="hit" cx="206.5" cy="211.7" r="14"/><circle class="dot" cx="206.5" cy="211.7" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="MK Dons: 1.62 xG for, 1.70 xG against per game (5 games)"><circle class="hit" cx="342.2" cy="243.2" r="14"/><circle class="dot" cx="342.2" cy="243.2" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="Notts County: 1.49 xG for, 1.07 xG against per game (5 games)"><circle class="hit" cx="305.3" cy="123.9" r="14"/><circle class="dot" cx="305.3" cy="123.9" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="Oxford: 1.43 xG for, 1.85 xG against per game (4 games)"><circle class="hit" cx="286.3" cy="272.5" r="14"/><circle class="dot" cx="286.3" cy="272.5" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="Peterborough: 1.49 xG for, 1.40 xG against per game (5 games)"><circle class="hit" cx="305.3" cy="187.0" r="14"/><circle class="dot" cx="305.3" cy="187.0" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="Plymouth: 1.43 xG for, 1.76 xG against per game (5 games)"><circle class="hit" cx="288.3" cy="255.8" r="14"/><circle class="dot" cx="288.3" cy="255.8" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="Reading: 2.21 xG for, 0.96 xG against per game (4 games)"><circle class="hit" cx="509.9" cy="102.5" r="14"/><circle class="dot" cx="509.9" cy="102.5" r="5"/></g>
+<text class="lbl other" x="499.9" y="106.5" text-anchor="end">Reading</text>
+<g class="pt other" tabindex="0" data-tip="Sheffield Wednesday: 2.42 xG for, 1.36 xG against per game (5 games)"><circle class="hit" cx="567.7" cy="179.8" r="14"/><circle class="dot" cx="567.7" cy="179.8" r="5"/></g>
+<text class="lbl other" x="557.7" y="183.8" text-anchor="end">Sheffield Wednesday</text>
+<g class="pt other" tabindex="0" data-tip="Stevenage: 0.94 xG for, 1.07 xG against per game (6 games)"><circle class="hit" cx="149.5" cy="123.7" r="14"/><circle class="dot" cx="149.5" cy="123.7" r="5"/></g>
+<text class="lbl other" x="159.5" y="127.7" text-anchor="start">Stevenage</text>
+<g class="pt other" tabindex="0" data-tip="Stockport: 1.83 xG for, 1.25 xG against per game (5 games)"><circle class="hit" cx="402.5" cy="158.1" r="14"/><circle class="dot" cx="402.5" cy="158.1" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="Wigan: 2.03 xG for, 1.71 xG against per game (5 games)"><circle class="hit" cx="458.1" cy="245.1" r="14"/><circle class="dot" cx="458.1" cy="245.1" r="5"/></g>
+<g class="pt other" tabindex="0" data-tip="Wycombe: 1.26 xG for, 1.65 xG against per game (5 games)"><circle class="hit" cx="239.4" cy="235.3" r="14"/><circle class="dot" cx="239.4" cy="235.3" r="5"/></g>
+<g class="pt opp" tabindex="0" data-tip="Bradford City: 1.24 xG for, 0.91 xG against per game (5 games)"><circle class="hit" cx="233.8" cy="93.5" r="14"/><circle class="dot" cx="233.8" cy="93.5" r="7"/></g>
+<text class="lbl opp" x="243.8" y="97.5" text-anchor="start">Bradford City</text>
+<g class="pt luton" tabindex="0" data-tip="Luton Town: 1.55 xG for, 1.10 xG against per game (6 games)"><circle class="hit" cx="322.3" cy="130.6" r="14"/><circle class="dot" cx="322.3" cy="130.6" r="7"/></g>
+<text class="lbl luton" x="332.3" y="134.6" text-anchor="start">Luton Town</text>
+</svg>
+<details class="tw"><summary>Table view</summary><table><thead><tr><th>Team</th><th class="num">P</th><th class="num">xG for /g</th><th class="num">xG against /g</th><th class="num">xG diff /g</th></tr></thead><tbody><tr class="other"><td>Reading</td><td class="num">4</td><td class="num">2.21</td><td class="num">0.96</td><td class="num">+1.26</td></tr><tr class="other"><td>Sheffield Wednesday</td><td class="num">5</td><td class="num">2.42</td><td class="num">1.36</td><td class="num">+1.05</td></tr><tr class="other"><td>Huddersfield</td><td class="num">5</td><td class="num">1.95</td><td class="num">1.05</td><td class="num">+0.91</td></tr><tr class="other"><td>Stockport</td><td class="num">5</td><td class="num">1.83</td><td class="num">1.25</td><td class="num">+0.59</td></tr><tr class="luton"><td>Luton Town</td><td class="num">6</td><td class="num">1.55</td><td class="num">1.10</td><td class="num">+0.45</td></tr><tr class="other"><td>Notts County</td><td class="num">5</td><td class="num">1.49</td><td class="num">1.07</td><td class="num">+0.42</td></tr><tr class="opp"><td>Bradford City</td><td class="num">5</td><td class="num">1.24</td><td class="num">0.91</td><td class="num">+0.33</td></tr><tr class="other"><td>Wigan</td><td class="num">5</td><td class="num">2.03</td><td class="num">1.71</td><td class="num">+0.32</td></tr><tr class="other"><td>Doncaster</td><td class="num">5</td><td class="num">1.32</td><td class="num">1.10</td><td class="num">+0.22</td></tr><tr class="other"><td>Peterborough</td><td class="num">5</td><td class="num">1.49</td><td class="num">1.40</td><td class="num">+0.09</td></tr><tr class="other"><td>Barnsley</td><td class="num">5</td><td class="num">1.48</td><td class="num">1.48</td><td class="num">-0.00</td></tr><tr class="other"><td>MK Dons</td><td class="num">5</td><td class="num">1.62</td><td class="num">1.70</td><td class="num">-0.07</td></tr><tr class="other"><td>Stevenage</td><td class="num">6</td><td class="num">0.94</td><td class="num">1.07</td><td class="num">-0.12</td></tr><tr class="other"><td>Leicester</td><td class="num">5</td><td class="num">1.24</td><td class="num">1.40</td><td class="num">-0.16</td></tr><tr class="other"><td>Burton</td><td class="num">5</td><td class="num">1.00</td><td class="num">1.25</td><td class="num">-0.25</td></tr><tr class="other"><td>Plymouth</td><td class="num">5</td><td class="num">1.43</td><td class="num">1.76</td><td class="num">-0.33</td></tr><tr class="other"><td>Mansfield</td><td class="num">5</td><td class="num">1.14</td><td class="num">1.53</td><td class="num">-0.39</td></tr><tr class="other"><td>Wycombe</td><td class="num">5</td><td class="num">1.26</td><td class="num">1.65</td><td class="num">-0.39</td></tr><tr class="other"><td>Oxford</td><td class="num">4</td><td class="num">1.43</td><td class="num">1.85</td><td class="num">-0.43</td></tr><tr class="other"><td>Blackpool</td><td class="num">5</td><td class="num">1.84</td><td class="num">2.33</td><td class="num">-0.49</td></tr><tr class="other"><td>AFC Wimbledon</td><td class="num">5</td><td class="num">0.80</td><td class="num">1.29</td><td class="num">-0.49</td></tr><tr class="other"><td>Leyton Orient</td><td class="num">5</td><td class="num">1.07</td><td class="num">1.77</td><td class="num">-0.71</td></tr><tr class="other"><td>Cambridge</td><td class="num">5</td><td class="num">1.05</td><td class="num">1.79</td><td class="num">-0.74</td></tr><tr class="other"><td>Bromley</td><td class="num">5</td><td class="num">0.88</td><td class="num">1.85</td><td class="num">-0.97</td></tr></tbody></table></details><!-- /block:SCATTER -->
+        <div class="legend"><span><i class="luton"></i>Luton</span><span><i class="opp"></i>Bradford</span><span><i class="other"></i>other clubs</span></div>
+      </figure>
+    </div>
+    <div class="grid grid-wide" style="margin-top:28px">
+      <figure class="fig">
+        <figcaption><b>Conceded against expected, match by match</b><span>Hollow dot = expected goals against. Filled dot = goals actually conceded. The line is the gap.</span></figcaption>
+        <div class="grid" style="gap:12px 24px">
+          <div><p class="muted small" style="margin:0 0 4px"><strong>Luton</strong> · six games</p><!-- block:DUMBBELL_LUTON --><svg class="viz" viewBox="0 0 440 240" role="img" xmlns="http://www.w3.org/2000/svg">
+<line class="grid" x1="118.0" x2="118.0" y1="22" y2="214"/><text class="tick" x="118.0" y="230" text-anchor="middle">0</text>
+<line class="grid" x1="173.6" x2="173.6" y1="22" y2="214"/><text class="tick" x="173.6" y="230" text-anchor="middle">1</text>
+<line class="grid" x1="229.3" x2="229.3" y1="22" y2="214"/><text class="tick" x="229.3" y="230" text-anchor="middle">2</text>
+<line class="grid" x1="284.9" x2="284.9" y1="22" y2="214"/><text class="tick" x="284.9" y="230" text-anchor="middle">3</text>
+<line class="grid" x1="340.5" x2="340.5" y1="22" y2="214"/><text class="tick" x="340.5" y="230" text-anchor="middle">4</text>
+<line class="grid" x1="396.2" x2="396.2" y1="22" y2="214"/><text class="tick" x="396.2" y="230" text-anchor="middle">5</text>
+<text class="rowlbl" x="108" y="49.0" text-anchor="end">@ Reading</text>
+<g tabindex="0" data-tip="Luton Town at Reading, 15 Aug: conceded 3 from 1.77 expected"><rect class="hit" x="118" y="30.0" width="306" height="30"/><line class="db-line" x1="216.5" x2="284.9" y1="45.0" y2="45.0"/><circle class="db-exp" cx="216.5" cy="45.0" r="6"/><circle class="db-act luton" cx="284.9" cy="45.0" r="6"/></g>
+<text class="rowlbl" x="108" y="79.0" text-anchor="end">v Notts County</text>
+<g tabindex="0" data-tip="Luton Town v Notts County, 22 Aug: conceded 2 from 0.79 expected"><rect class="hit" x="118" y="60.0" width="306" height="30"/><line class="db-line" x1="162.0" x2="229.3" y1="75.0" y2="75.0"/><circle class="db-exp" cx="162.0" cy="75.0" r="6"/><circle class="db-act luton" cx="229.3" cy="75.0" r="6"/></g>
+<text class="rowlbl" x="108" y="109.0" text-anchor="end">@ Mansfield</text>
+<g tabindex="0" data-tip="Luton Town at Mansfield, 30 Aug: conceded 5 from 1.37 expected"><rect class="hit" x="118" y="90.0" width="306" height="30"/><line class="db-line" x1="194.2" x2="396.2" y1="105.0" y2="105.0"/><circle class="db-exp" cx="194.2" cy="105.0" r="6"/><circle class="db-act luton" cx="396.2" cy="105.0" r="6"/></g>
+<text class="rowlbl" x="108" y="139.0" text-anchor="end">v Stockport</text>
+<g tabindex="0" data-tip="Luton Town v Stockport, 2 Sep: conceded 0 from 0.85 expected"><rect class="hit" x="118" y="120.0" width="306" height="30"/><line class="db-line" x1="165.3" x2="118.0" y1="135.0" y2="135.0"/><circle class="db-exp" cx="165.3" cy="135.0" r="6"/><circle class="db-act luton" cx="118.0" cy="135.0" r="6"/></g>
+<text class="rowlbl" x="108" y="169.0" text-anchor="end">v Leyton Orient</text>
+<g tabindex="0" data-tip="Luton Town v Leyton Orient, 5 Sep: conceded 1 from 0.56 expected"><rect class="hit" x="118" y="150.0" width="306" height="30"/><line class="db-line" x1="149.2" x2="173.6" y1="165.0" y2="165.0"/><circle class="db-exp" cx="149.2" cy="165.0" r="6"/><circle class="db-act luton" cx="173.6" cy="165.0" r="6"/></g>
+<text class="rowlbl" x="108" y="199.0" text-anchor="end">@ Stevenage</text>
+<g tabindex="0" data-tip="Luton Town at Stevenage, 10 Sep: conceded 2 from 1.28 expected"><rect class="hit" x="118" y="180.0" width="306" height="30"/><line class="db-line" x1="189.2" x2="229.3" y1="195.0" y2="195.0"/><circle class="db-exp" cx="189.2" cy="195.0" r="6"/><circle class="db-act luton" cx="229.3" cy="195.0" r="6"/></g>
+<text class="axis" x="271" y="239" text-anchor="middle" font-size="10">goals</text></svg>
+<details class="tw"><summary>Table view</summary><table><thead><tr><th>Match</th><th class="num">Expected against</th><th class="num">Conceded</th><th class="num">Gap</th></tr></thead><tbody><tr><td>@ Reading · 15 Aug</td><td class="num">1.77</td><td class="num">3</td><td class="num">+1.23</td></tr><tr><td>v Notts County · 22 Aug</td><td class="num">0.79</td><td class="num">2</td><td class="num">+1.21</td></tr><tr><td>@ Mansfield · 30 Aug</td><td class="num">1.37</td><td class="num">5</td><td class="num">+3.63</td></tr><tr><td>v Stockport · 2 Sep</td><td class="num">0.85</td><td class="num">0</td><td class="num">-0.85</td></tr><tr><td>v Leyton Orient · 5 Sep</td><td class="num">0.56</td><td class="num">1</td><td class="num">+0.44</td></tr><tr><td>@ Stevenage · 10 Sep</td><td class="num">1.28</td><td class="num">2</td><td class="num">+0.72</td></tr></tbody></table></details><!-- /block:DUMBBELL_LUTON --></div>
+          <div><p class="muted small" style="margin:0 0 4px"><strong>Bradford</strong> · five games</p><!-- block:DUMBBELL_OPP --><svg class="viz" viewBox="0 0 440 210" role="img" xmlns="http://www.w3.org/2000/svg">
+<line class="grid" x1="118.0" x2="118.0" y1="22" y2="184"/><text class="tick" x="118.0" y="200" text-anchor="middle">0</text>
+<line class="grid" x1="173.6" x2="173.6" y1="22" y2="184"/><text class="tick" x="173.6" y="200" text-anchor="middle">1</text>
+<line class="grid" x1="229.3" x2="229.3" y1="22" y2="184"/><text class="tick" x="229.3" y="200" text-anchor="middle">2</text>
+<line class="grid" x1="284.9" x2="284.9" y1="22" y2="184"/><text class="tick" x="284.9" y="200" text-anchor="middle">3</text>
+<line class="grid" x1="340.5" x2="340.5" y1="22" y2="184"/><text class="tick" x="340.5" y="200" text-anchor="middle">4</text>
+<line class="grid" x1="396.2" x2="396.2" y1="22" y2="184"/><text class="tick" x="396.2" y="200" text-anchor="middle">5</text>
+<text class="rowlbl" x="108" y="49.0" text-anchor="end">v Peterborough</text>
+<g tabindex="0" data-tip="Bradford City v Peterborough, 15 Aug: conceded 0 from 1.10 expected"><rect class="hit" x="118" y="30.0" width="306" height="30"/><line class="db-line" x1="179.2" x2="118.0" y1="45.0" y2="45.0"/><circle class="db-exp" cx="179.2" cy="45.0" r="6"/><circle class="db-act opp" cx="118.0" cy="45.0" r="6"/></g>
+<text class="rowlbl" x="108" y="79.0" text-anchor="end">@ Sheffield Wednesday</text>
+<g tabindex="0" data-tip="Bradford City at Sheffield Wednesday, 20 Aug: conceded 0 from 1.36 expected"><rect class="hit" x="118" y="60.0" width="306" height="30"/><line class="db-line" x1="193.7" x2="118.0" y1="75.0" y2="75.0"/><circle class="db-exp" cx="193.7" cy="75.0" r="6"/><circle class="db-act opp" cx="118.0" cy="75.0" r="6"/></g>
+<text class="rowlbl" x="108" y="109.0" text-anchor="end">@ Plymouth</text>
+<g tabindex="0" data-tip="Bradford City at Plymouth, 29 Aug: conceded 2 from 1.16 expected"><rect class="hit" x="118" y="90.0" width="306" height="30"/><line class="db-line" x1="182.5" x2="229.3" y1="105.0" y2="105.0"/><circle class="db-exp" cx="182.5" cy="105.0" r="6"/><circle class="db-act opp" cx="229.3" cy="105.0" r="6"/></g>
+<text class="rowlbl" x="108" y="139.0" text-anchor="end">v Cambridge</text>
+<g tabindex="0" data-tip="Bradford City v Cambridge, 1 Sep: conceded 2 from 0.44 expected"><rect class="hit" x="118" y="120.0" width="306" height="30"/><line class="db-line" x1="142.5" x2="229.3" y1="135.0" y2="135.0"/><circle class="db-exp" cx="142.5" cy="135.0" r="6"/><circle class="db-act opp" cx="229.3" cy="135.0" r="6"/></g>
+<text class="rowlbl" x="108" y="169.0" text-anchor="end">v Mansfield</text>
+<g tabindex="0" data-tip="Bradford City v Mansfield, 5 Sep: conceded 0 from 0.48 expected"><rect class="hit" x="118" y="150.0" width="306" height="30"/><line class="db-line" x1="144.7" x2="118.0" y1="165.0" y2="165.0"/><circle class="db-exp" cx="144.7" cy="165.0" r="6"/><circle class="db-act opp" cx="118.0" cy="165.0" r="6"/></g>
+<text class="axis" x="271" y="209" text-anchor="middle" font-size="10">goals</text></svg>
+<details class="tw"><summary>Table view</summary><table><thead><tr><th>Match</th><th class="num">Expected against</th><th class="num">Conceded</th><th class="num">Gap</th></tr></thead><tbody><tr><td>v Peterborough · 15 Aug</td><td class="num">1.10</td><td class="num">0</td><td class="num">-1.10</td></tr><tr><td>@ Sheffield Wednesday · 20 Aug</td><td class="num">1.36</td><td class="num">0</td><td class="num">-1.36</td></tr><tr><td>@ Plymouth · 29 Aug</td><td class="num">1.16</td><td class="num">2</td><td class="num">+0.84</td></tr><tr><td>v Cambridge · 1 Sep</td><td class="num">0.44</td><td class="num">2</td><td class="num">+1.56</td></tr><tr><td>v Mansfield · 5 Sep</td><td class="num">0.48</td><td class="num">0</td><td class="num">-0.48</td></tr></tbody></table></details><!-- /block:DUMBBELL_OPP --></div>
+        </div>
+        <div class="legend"><span><i class="exp"></i>expected against</span><span><i class="luton"></i>Luton conceded</span><span><i class="opp"></i>Bradford conceded</span></div>
+      </figure>
+      <div class="block">
+        <h3>The first half is where Luton's season has been lost</h3>
+        <p>Nine of the thirteen goals Luton have conceded came before half-time. They have never led at the break: level three times, behind three times. After the interval the picture inverts — nine of their twelve goals scored, four conceded. Whatever the cause, and team-level data cannot say whether it is a slow start, an early press that fades, or opponents front-loading their plan, the pattern is six games deep and it is the single most Luton-specific fact in the dataset.</p>
+        <p>Now put Bradford's habits next to it. Four of Bradford's five matches were level or a single goal apart at half-time; three were goalless. Bradford's first halves are low-event by design. Their goals arrive late — four of five in the second half — and so do the goals they concede, three of four. So the game's likeliest shape is a quiet first 45 followed by a contested second, and that shape is the one Luton have been good at. The condition is surviving the first half without the usual gift. If Bradford's tendency holds, they will not be pressing for one.</p>
+        <p>The dumbbells show the other thing worth knowing: the conceding gap is not evenly spread. It is Reading, Mansfield and Stevenage — all away — that produced it. At home, Luton have conceded three from 2.2 expected. Bradford's own dumbbells are short. They concede what they should, no more, which is what a well-organised defence looks like in this data.</p>
+      </div>
+    </div>
+    <div class="grid grid-wide" style="margin-top:28px">
+      <div class="block">
+        <h3>Bradford's realistic route to a goal is a dead ball</h3>
+        <p>Bradford win 7.6 corners a game, second in the division, and they do it away from home too — nine at Sheffield Wednesday, six at Plymouth. For a side that takes few shots and poor ones, that is the tell: they get to the byline and into the box without turning it into open-play chances, and they accumulate set pieces instead. Luton, for their part, concede four corners a game, fourth fewest. One of those two numbers gives on Saturday.</p>
+        <p>What this data cannot say is how many of Bradford's five goals actually came from corners. That is a shot-by-shot question and the free file does not carry it. The Thursday run should answer it from the match reports before anyone builds a plan around it.</p>
+        <h3 style="margin-top:18px">The variance problem, seen across the league</h3>
+        <p>Every club's goals conceded minus the chances they allowed. Luton are at the foot of it and nobody is close: 57% of on-target shots against them have gone in, against a league average of 37%. Rates like that do not persist. Either the goalkeeping is the cause, in which case a change fixes it, or it is a run, in which case it fixes itself. Bradford sit in the comfortable middle: they allow poor shots and concede about what those shots are worth.</p>
+        <p>The honest framing for Saturday: Luton's process is the fifth-best in League One and their results are eighth. Bradford's process is seventh and their results are fifth. If the game is decided on the balance of chances, it favours the home side. It has not been decided that way for Luton very often this season.</p>
+      </div>
+      <figure class="fig">
+        <figcaption><b>Goals conceded minus expected goals against</b><span>Whole season, all 24 clubs. Right of the line = conceding more than the chances were worth.</span></figcaption>
+        <!-- block:BARS --><svg class="viz" viewBox="0 0 640 452" role="img" xmlns="http://www.w3.org/2000/svg">
+<line class="grid" x1="136.8" x2="136.8" y1="10" y2="422"/><text class="tick" x="136.8" y="438" text-anchor="middle">-5</text>
+<line class="grid" x1="175.7" x2="175.7" y1="10" y2="422"/><text class="tick" x="175.7" y="438" text-anchor="middle">-4</text>
+<line class="grid" x1="214.7" x2="214.7" y1="10" y2="422"/><text class="tick" x="214.7" y="438" text-anchor="middle">-3</text>
+<line class="grid" x1="253.6" x2="253.6" y1="10" y2="422"/><text class="tick" x="253.6" y="438" text-anchor="middle">-2</text>
+<line class="grid" x1="292.6" x2="292.6" y1="10" y2="422"/><text class="tick" x="292.6" y="438" text-anchor="middle">-1</text>
+<line class="grid" x1="331.5" x2="331.5" y1="10" y2="422"/><text class="tick" x="331.5" y="438" text-anchor="middle">+0</text>
+<line class="grid" x1="370.5" x2="370.5" y1="10" y2="422"/><text class="tick" x="370.5" y="438" text-anchor="middle">+1</text>
+<line class="grid" x1="409.4" x2="409.4" y1="10" y2="422"/><text class="tick" x="409.4" y="438" text-anchor="middle">+2</text>
+<line class="grid" x1="448.4" x2="448.4" y1="10" y2="422"/><text class="tick" x="448.4" y="438" text-anchor="middle">+3</text>
+<line class="grid" x1="487.3" x2="487.3" y1="10" y2="422"/><text class="tick" x="487.3" y="438" text-anchor="middle">+4</text>
+<line class="grid" x1="526.2" x2="526.2" y1="10" y2="422"/><text class="tick" x="526.2" y="438" text-anchor="middle">+5</text>
+<line class="grid" x1="565.2" x2="565.2" y1="10" y2="422"/><text class="tick" x="565.2" y="438" text-anchor="middle">+6</text>
+<line class="grid" x1="604.1" x2="604.1" y1="10" y2="422"/><text class="tick" x="604.1" y="438" text-anchor="middle">+7</text>
+<line class="base" x1="331.5" x2="331.5" y1="10" y2="422"/>
+<g tabindex="0" data-tip="Blackpool: conceded 7 from 11.7 expected (-4.7) in 5 games"><rect class="hit" x="150" y="10" width="430" height="17"/><rect class="bar other" x="150.0" y="12" width="181.5" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="23" text-anchor="end">Blackpool</text>
+<text class="val" x="144.0" y="23" text-anchor="end">-4.7</text>
+<g tabindex="0" data-tip="Leyton Orient: conceded 6 from 8.9 expected (-2.9) in 5 games"><rect class="hit" x="150" y="27" width="430" height="17"/><rect class="bar other" x="219.7" y="29" width="111.8" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="40" text-anchor="end">Leyton Orient</text>
+<g tabindex="0" data-tip="Oxford: conceded 6 from 7.4 expected (-1.4) in 4 games"><rect class="hit" x="150" y="44" width="430" height="17"/><rect class="bar other" x="277.0" y="46" width="54.5" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="57" text-anchor="end">Oxford</text>
+<g tabindex="0" data-tip="Huddersfield: conceded 4 from 5.2 expected (-1.2) in 5 games"><rect class="hit" x="150" y="61" width="430" height="17"/><rect class="bar other" x="283.6" y="63" width="47.9" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="74" text-anchor="end">Huddersfield</text>
+<g tabindex="0" data-tip="Cambridge: conceded 8 from 8.9 expected (-0.9) in 5 games"><rect class="hit" x="150" y="78" width="430" height="17"/><rect class="bar other" x="294.9" y="80" width="36.6" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="91" text-anchor="end">Cambridge</text>
+<g tabindex="0" data-tip="Plymouth: conceded 8 from 8.8 expected (-0.8) in 5 games"><rect class="hit" x="150" y="95" width="430" height="17"/><rect class="bar other" x="300.0" y="97" width="31.5" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="108" text-anchor="end">Plymouth</text>
+<g tabindex="0" data-tip="Sheffield Wednesday: conceded 6 from 6.8 expected (-0.8) in 5 games"><rect class="hit" x="150" y="112" width="430" height="17"/><rect class="bar other" x="300.0" y="114" width="31.5" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="125" text-anchor="end">Sheffield Wednesday</text>
+<g tabindex="0" data-tip="Bradford City: conceded 4 from 4.5 expected (-0.5) in 5 games"><rect class="hit" x="150" y="129" width="430" height="17"/><rect class="bar opp" x="310.5" y="131" width="21.0" height="13" rx="2"/></g>
+<text class="rowlbl opp" x="142" y="142" text-anchor="end">Bradford City</text>
+<text class="val" x="304.5" y="142" text-anchor="end">-0.5</text>
+<g tabindex="0" data-tip="Stockport: conceded 6 from 6.2 expected (-0.2) in 5 games"><rect class="hit" x="150" y="146" width="430" height="17"/><rect class="bar other" x="322.2" y="148" width="9.3" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="159" text-anchor="end">Stockport</text>
+<g tabindex="0" data-tip="Leicester: conceded 7 from 7.0 expected (+0.0) in 5 games"><rect class="hit" x="150" y="163" width="430" height="17"/><rect class="bar other" x="331.5" y="165" width="1.0" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="176" text-anchor="end">Leicester</text>
+<g tabindex="0" data-tip="MK Dons: conceded 9 from 8.5 expected (+0.5) in 5 games"><rect class="hit" x="150" y="180" width="430" height="17"/><rect class="bar other" x="331.5" y="182" width="20.3" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="193" text-anchor="end">MK Dons</text>
+<g tabindex="0" data-tip="AFC Wimbledon: conceded 7 from 6.5 expected (+0.5) in 5 games"><rect class="hit" x="150" y="197" width="430" height="17"/><rect class="bar other" x="331.5" y="199" width="20.6" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="210" text-anchor="end">AFC Wimbledon</text>
+<g tabindex="0" data-tip="Barnsley: conceded 8 from 7.4 expected (+0.6) in 5 games"><rect class="hit" x="150" y="214" width="430" height="17"/><rect class="bar other" x="331.5" y="216" width="23.0" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="227" text-anchor="end">Barnsley</text>
+<g tabindex="0" data-tip="Stevenage: conceded 7 from 6.4 expected (+0.6) in 6 games"><rect class="hit" x="150" y="231" width="430" height="17"/><rect class="bar other" x="331.5" y="233" width="23.4" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="244" text-anchor="end">Stevenage</text>
+<g tabindex="0" data-tip="Notts County: conceded 6 from 5.3 expected (+0.7) in 5 games"><rect class="hit" x="150" y="248" width="430" height="17"/><rect class="bar other" x="331.5" y="250" width="25.7" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="261" text-anchor="end">Notts County</text>
+<g tabindex="0" data-tip="Burton: conceded 7 from 6.2 expected (+0.8) in 5 games"><rect class="hit" x="150" y="265" width="430" height="17"/><rect class="bar other" x="331.5" y="267" width="30.0" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="278" text-anchor="end">Burton</text>
+<g tabindex="0" data-tip="Reading: conceded 5 from 3.8 expected (+1.2) in 4 games"><rect class="hit" x="150" y="282" width="430" height="17"/><rect class="bar other" x="331.5" y="284" width="46.0" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="295" text-anchor="end">Reading</text>
+<g tabindex="0" data-tip="Peterborough: conceded 9 from 7.0 expected (+2.0) in 5 games"><rect class="hit" x="150" y="299" width="430" height="17"/><rect class="bar other" x="331.5" y="301" width="77.9" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="312" text-anchor="end">Peterborough</text>
+<g tabindex="0" data-tip="Wigan: conceded 11 from 8.5 expected (+2.5) in 5 games"><rect class="hit" x="150" y="316" width="430" height="17"/><rect class="bar other" x="331.5" y="318" width="96.2" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="329" text-anchor="end">Wigan</text>
+<g tabindex="0" data-tip="Doncaster: conceded 8 from 5.5 expected (+2.5) in 5 games"><rect class="hit" x="150" y="333" width="430" height="17"/><rect class="bar other" x="331.5" y="335" width="97.4" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="346" text-anchor="end">Doncaster</text>
+<g tabindex="0" data-tip="Mansfield: conceded 11 from 7.7 expected (+3.3) in 5 games"><rect class="hit" x="150" y="350" width="430" height="17"/><rect class="bar other" x="331.5" y="352" width="130.5" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="363" text-anchor="end">Mansfield</text>
+<g tabindex="0" data-tip="Wycombe: conceded 12 from 8.3 expected (+3.7) in 5 games"><rect class="hit" x="150" y="367" width="430" height="17"/><rect class="bar other" x="331.5" y="369" width="145.3" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="380" text-anchor="end">Wycombe</text>
+<g tabindex="0" data-tip="Bromley: conceded 15 from 9.2 expected (+5.8) in 5 games"><rect class="hit" x="150" y="384" width="430" height="17"/><rect class="bar other" x="331.5" y="386" width="224.7" height="13" rx="2"/></g>
+<text class="rowlbl other" x="142" y="397" text-anchor="end">Bromley</text>
+<g tabindex="0" data-tip="Luton Town: conceded 13 from 6.6 expected (+6.4) in 6 games"><rect class="hit" x="150" y="401" width="430" height="17"/><rect class="bar luton" x="331.5" y="403" width="248.5" height="13" rx="2"/></g>
+<text class="rowlbl luton" x="142" y="414" text-anchor="end">Luton Town</text>
+<text class="val" x="586.0" y="414" text-anchor="start">+6.4</text>
+<text class="axis" x="365" y="451" text-anchor="middle" font-size="10">← conceded fewer than the chances were worth   |   conceded more →</text></svg>
+<details class="tw"><summary>Table view</summary><table><thead><tr><th>Team</th><th class="num">Conceded</th><th class="num">Expected</th><th class="num">Gap</th></tr></thead><tbody><tr class="other"><td>Blackpool</td><td class="num">7</td><td class="num">11.7</td><td class="num">-4.7</td></tr><tr class="other"><td>Leyton Orient</td><td class="num">6</td><td class="num">8.9</td><td class="num">-2.9</td></tr><tr class="other"><td>Oxford</td><td class="num">6</td><td class="num">7.4</td><td class="num">-1.4</td></tr><tr class="other"><td>Huddersfield</td><td class="num">4</td><td class="num">5.2</td><td class="num">-1.2</td></tr><tr class="other"><td>Cambridge</td><td class="num">8</td><td class="num">8.9</td><td class="num">-0.9</td></tr><tr class="other"><td>Plymouth</td><td class="num">8</td><td class="num">8.8</td><td class="num">-0.8</td></tr><tr class="other"><td>Sheffield Wednesday</td><td class="num">6</td><td class="num">6.8</td><td class="num">-0.8</td></tr><tr class="opp"><td>Bradford City</td><td class="num">4</td><td class="num">4.5</td><td class="num">-0.5</td></tr><tr class="other"><td>Stockport</td><td class="num">6</td><td class="num">6.2</td><td class="num">-0.2</td></tr><tr class="other"><td>Leicester</td><td class="num">7</td><td class="num">7.0</td><td class="num">+0.0</td></tr><tr class="other"><td>MK Dons</td><td class="num">9</td><td class="num">8.5</td><td class="num">+0.5</td></tr><tr class="other"><td>AFC Wimbledon</td><td class="num">7</td><td class="num">6.5</td><td class="num">+0.5</td></tr><tr class="other"><td>Barnsley</td><td class="num">8</td><td class="num">7.4</td><td class="num">+0.6</td></tr><tr class="other"><td>Stevenage</td><td class="num">7</td><td class="num">6.4</td><td class="num">+0.6</td></tr><tr class="other"><td>Notts County</td><td class="num">6</td><td class="num">5.3</td><td class="num">+0.7</td></tr><tr class="other"><td>Burton</td><td class="num">7</td><td class="num">6.2</td><td class="num">+0.8</td></tr><tr class="other"><td>Reading</td><td class="num">5</td><td class="num">3.8</td><td class="num">+1.2</td></tr><tr class="other"><td>Peterborough</td><td class="num">9</td><td class="num">7.0</td><td class="num">+2.0</td></tr><tr class="other"><td>Wigan</td><td class="num">11</td><td class="num">8.5</td><td class="num">+2.5</td></tr><tr class="other"><td>Doncaster</td><td class="num">8</td><td class="num">5.5</td><td class="num">+2.5</td></tr><tr class="other"><td>Mansfield</td><td class="num">11</td><td class="num">7.7</td><td class="num">+3.3</td></tr><tr class="other"><td>Wycombe</td><td class="num">12</td><td class="num">8.3</td><td class="num">+3.7</td></tr><tr class="other"><td>Bromley</td><td class="num">15</td><td class="num">9.2</td><td class="num">+5.8</td></tr><tr class="luton"><td>Luton Town</td><td class="num">13</td><td class="num">6.6</td><td class="num">+6.4</td></tr></tbody></table></details><!-- /block:BARS -->
+        <div class="legend"><span><i class="luton"></i>Luton</span><span><i class="opp"></i>Bradford</span><span><i class="other"></i>other clubs</span></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sheet" id="tracker">
+    <p class="label">Squad tracker <small>6 league games · team level · football-data.co.uk</small></p>
+    <div class="grid grid-wide">
+      <div>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Measure</th><th class="num">Luton</th><th class="num">Rank / 24</th><th class="num">Note</th></tr></thead>
+            <tbody>
+              <tr><td>xG for, per game</td><td class="num">1.55</td><td class="num">8th</td><td class="num">upper-mid</td></tr>
+              <tr><td>xG against, per game</td><td class="num">1.10</td><td class="num">7th</td><td class="num">solid</td></tr>
+              <tr><td>Goals − xG, for <em>(season total)</em></td><td class="num">+2.69</td><td class="num">7th</td><td class="num">finishing well</td></tr>
+              <tr class="luton"><td>Goals − xG, against <em>(season total)</em></td><td class="num">+6.38</td><td class="num">24th</td><td class="num">largest in league</td></tr>
+              <tr><td>Shots / on target</td><td class="num">13.0 / 4.5</td><td class="num">13th / 10th</td><td class="num">—</td></tr>
+              <tr><td>xG per shot</td><td class="num">0.12</td><td class="num">7th</td><td class="num">good chances</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <p class="label" style="margin:0 0 8px">Home / away split <small>three games each</small></p>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Venue</th><th class="num">xG for</th><th class="num">xG against</th><th class="num">Scored</th><th class="num">Conceded</th><th class="num">GA − xGA</th></tr></thead>
+            <tbody>
+              <tr><td>Home</td><td class="num">1.85</td><td class="num">0.73</td><td class="num">5</td><td class="num">3</td><td class="num">+0.80</td></tr>
+              <tr class="luton"><td>Away</td><td class="num">1.26</td><td class="num">1.47</td><td class="num">7</td><td class="num">10</td><td class="num">+5.58</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted small">The away problem is not that Luton defend much worse away — the chances they concede are only moderately worse. It is that those chances go in. Ten goals from 4.4 expected in three away matches is either a goalkeeping story or the worst run of luck in the division, and six games cannot tell you which.</p>
+      </div>
+    </div>
+    <p class="muted small" style="max-width:none">Team-level only: no player attribution, no possession, no pressing data. Player-level reading here is by eye from FotMob and Sofascore and from beat reporting, and is flagged as such. <strong>The xG model is unattributed</strong> — football-data.co.uk's column notes document every other field, including the bookmaker odds, and say nothing about who supplies the expected-goals figures. The division is uneven on games played — Luton and Stevenage on six, Oxford and Reading on four — so the rate rows are ranked per game and the two goals-minus-xG rows, which are season totals, are ranked on the total. Measured per game rather than in total, Luton's conceding gap is +1.06, second-worst behind Bromley's +1.15.</p>
+  </section>
+
+  <section class="sheet" id="season">
+    <p class="label">Season state <small>table · next six · schedule shape</small></p>
+    <div class="grid grid-wide">
+      <div>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>#</th><th>Club</th><th class="num">P</th><th class="num">Pts</th><th class="num">GD</th><th class="num">xGD</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Sheffield Wednesday</td><td class="num">5</td><td class="num">12</td><td class="num">+7</td><td class="num">+5.27</td></tr>
+              <tr><td>2</td><td>Huddersfield</td><td class="num">5</td><td class="num">11</td><td class="num">+6</td><td class="num">+4.53</td></tr>
+              <tr><td>3</td><td>Stockport</td><td class="num">5</td><td class="num">9</td><td class="num">+7</td><td class="num">+2.93</td></tr>
+              <tr><td>4</td><td>Stevenage</td><td class="num">6</td><td class="num">9</td><td class="num">+4</td><td class="num">−0.74</td></tr>
+              <tr class="opp"><td>5</td><td>Bradford City</td><td class="num">5</td><td class="num">9</td><td class="num">+1</td><td class="num">+1.66</td></tr>
+              <tr><td>6</td><td>Burton</td><td class="num">5</td><td class="num">8</td><td class="num">+3</td><td class="num">−1.23</td></tr>
+              <tr><td>7</td><td>Cambridge</td><td class="num">5</td><td class="num">8</td><td class="num">+1</td><td class="num">−3.70</td></tr>
+              <tr class="luton"><td>8</td><td>Luton Town</td><td class="num">6</td><td class="num">8</td><td class="num">−1</td><td class="num">+2.69</td></tr>
+              <tr><td>9</td><td>Reading</td><td class="num">4</td><td class="num">7</td><td class="num">+6</td><td class="num">+5.03</td></tr>
+              <tr><td>10</td><td>Leyton Orient</td><td class="num">5</td><td class="num">7</td><td class="num">+4</td><td class="num">−3.54</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted small">Luton's xG difference of +2.69 is the fifth-best in the division, behind Sheffield Wednesday, Reading, Huddersfield and Stockport — all four of whom sit above them, and one of whom has played two games fewer. On process, Luton belong in that company. On points they are four behind the top.</p>
+      </div>
+      <div>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Date</th><th>Opponent</th><th>Venue</th><th>Comp</th><th class="num">UK kickoff</th></tr></thead>
+            <tbody>
+              <tr class="luton"><td>Sat 19 Sep</td><td>Bradford City</td><td>Home</td><td>League One</td><td class="num">15:00</td></tr>
+              <tr><td>Tue 22 Sep</td><td>Ipswich Town U21</td><td>Home</td><td>EFL Trophy</td><td class="num">19:00</td></tr>
+              <tr class="muted"><td>Sat 26 Sep</td><td>Huddersfield</td><td>Away</td><td>League One</td><td class="num">POSTPONED</td></tr>
+              <tr class="muted"><td>Sat 3 Oct</td><td>Doncaster Rovers</td><td>Home</td><td>League One</td><td class="num">POSTPONED</td></tr>
+              <tr><td>Tue 6 Oct</td><td>Colchester United</td><td>Away</td><td>EFL Trophy</td><td class="num">19:45</td></tr>
+              <tr><td>Sat 10 Oct</td><td>Wycombe Wanderers</td><td>Away</td><td>League One</td><td class="num">15:00</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted small"><strong>Shape: not a run of Saturdays at all.</strong> Luton announced on 7 Sep that Huddersfield away and Doncaster at home are postponed for international call-ups — the club has not said which players. Nine days separate Stevenage from Bradford, the longest rest of the season so far and Wilshere's first real training week. After Bradford, the league programme stops: an under-21 Trophy tie on the 22nd, nothing on the 26th, nothing on 3 Oct, a Trophy tie at Colchester on the 6th, and no competitive league football again until Wycombe away on <strong>10 Oct — twenty-one days after the Bradford game</strong>. No rearranged dates have been published.</p>
+        <p class="muted small">Put the two gaps end to end and the shape is starker than either half suggests. Between the Stevenage defeat on 10 September and the Wycombe game on 10 October — a calendar month — Luton play <strong>one</strong> league match. Six games have been played and the seventh is the only one the division will see from them until the middle of October. That is an unusual thing to happen to a season in progress, and it is why the sample problem on this page gets worse before it gets better.</p>
+        <p class="muted small">That matters more than a fixture note usually does. It gives <strong>Jordan Clark (CM)</strong> three further weeks to be fit for a league match rather than three further games to miss, and it means Saturday is the only league evidence anyone gets on the conceding question for three weeks. Whatever happens at Kenilworth Road will be over-read, by this page as much as anyone. Kickoff times for non-televised Saturdays are the standard 15:00 and are subject to Sky moving them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet" id="players">
+    <p class="label">Player watch <small>standing interests</small></p>
+    <div class="players">
+      <div class="player">
+        <div class="who">Jordan Clark <span class="pos">CM · the club's most important player</span></div>
+        <div>
+          <p>Closer, and the calendar has just moved in his favour. Non-contact training for nine or ten days as of 9 Sep, progressed from running to ball work, and waiting on a protective mask before contact resumes. Wilshere said he did not expect it to be much longer and described the absence in terms of energy and leadership rather than goals — which is the right frame, and the one to test on his return. With Huddersfield and Doncaster postponed, the league games he stands to miss between now and mid-October number <strong>two</strong>: Bradford on Saturday and Wycombe on 10 Oct. A fortnight ago that same recovery would have cost him four.</p>
+          <p>The Stevenage performance sharpens what to watch for. Luton did not lack the ball; they lacked anyone to do something decisive with it in the final third. Clark's twelve league goals last season came from a midfielder arriving rather than a forward finishing. If the attack's <em>shape</em> changes on his return — more penetration, fewer sideways circuits — that is the evidence. If Luton simply score more from the same flat possession, it was finishing variance all along.</p>
+        </div>
+      </div>
+      <div class="player">
+        <div class="who">Josh Keeley <span class="pos">GK · the defensive-variance question</span></div>
+        <div>
+          <p>The most consequential ninety minutes of his season so far, and not in a good way. Beaten from 22 yards through his hands for the opener, deflected a cross onto Magennis for the second, and misjudged a clearance on 28 minutes. Luton Today marked him 3 out of 10, the lowest on the card, and put the criticism on long-range shooting to his right specifically. Six games in, the side has conceded 13 on 6.6 expected.</p>
+          <p>What can honestly be said: the gap is real, it is the largest in the division, and the beat now describes a particular weakness rather than a general one. What cannot be said from this data is that he is the cause, because the free dataset has no post-shot xG and therefore cannot separate poor goalkeeping from well-struck shots. The named weakness is the useful part — it predicts something. Bradford's chances are ordinary ones — 0.10 expected goals per shot against a league norm of 0.11 — which is the profile of a side that shoots from where it can rather than where it wants. Whether they go looking for that right-hand side is worth watching from the first ten minutes. The name, checked again this week against the club's own site and the ratings card, is <strong>Josh</strong>.</p>
+        </div>
+      </div>
+      <div class="player">
+        <div class="who">Callum Marshall / Nahki Wells <span class="pos">CF · the striker choice, tracked as a pair</span></div>
+        <div>
+          <p>Marshall started at Stevenage and came off on 66 for Wells — the same pattern as the rotation elsewhere in the side, and still no sign of the two being trusted on the pitch together. Neither had much to work with: two shots on target between the whole team.</p>
+          <p>The pairing question stays open because the situation that would force it — chasing a game, needing a goal — arrived at Stevenage and Wilshere still went one-for-one rather than putting both on. That is a choice, not an accident, and worth watching again at home to Bradford, where Luton will have most of the ball against a side that concedes less than anyone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet" id="talk">
+    <p class="label">Talking points <small>for Megan</small></p>
+    <ol class="talk">
+      <li><strong>The goalkeeper case is the strongest it has been and still isn't proven.</strong> Thirteen conceded on 6.6 expected is the biggest gap in League One, and at Stevenage he was in both goals. But expected goals stops at the moment of the shot — it cannot tell a save that should have been made from a shot that could not have been saved. Anyone who says the numbers prove it is a goalkeeping problem is claiming more than the numbers can carry. Anyone who says it is pure luck is ignoring that it has happened six times.</li>
+      <li><strong>Luton are the best team in the bottom half of this table.</strong> Fifth-best xG difference in the division, eighth on points, negative goal difference. Either the underlying numbers are about to start paying — in which case this is a promotion side having a bad month — or there is something the model cannot see, and the something is standing between the posts.</li>
+      <li><strong>The first half is the whole argument.</strong> Nine of thirteen conceded before the break, nine of twelve scored after it. Is that a fitness curve, a game-plan that starts too passively, or three bad away days in a row? Bradford's first halves are usually goalless, which either neutralises Luton's weakness or removes their excuse.</li>
+      <li><strong>The away problem is not a defending problem.</strong> Luton concede only moderately worse chances away than at home — 1.47 xGA against 0.73. The difference is that away, those chances go in: ten goals from 4.4 expected in three matches, against three from 2.2 at home. Whatever is wrong on the road, it is not the shape of the defence.</li>
+      <li><strong>Eighty per cent of the ball is not a compliment.</strong> Stevenage were happy to concede possession and Luton produced 0.83 xG from it. Bradford suppress chances better than anyone in the league and win corners at the second-highest rate. Expect them to invite exactly the same thing at Kenilworth Road, and to make the set pieces count at the other end.</li>
+      <li><strong>The season just went on hold, and that cuts both ways.</strong> Two postponed league fixtures mean one league match in twenty-one days. Good: Clark gets back for a schedule that has barely started, and a squad rotating three a game gets a proper block of training instead. Bad: if Saturday goes badly, Luton sit on it for three weeks, and a six-game sample that everyone is already over-reading becomes a seven-game sample nobody can add to. The argument worth having is whether a break helps a side whose problem is variance — it does not fix variance, but it does stop it compounding.</li>
+      <li class="muted">Analytical observations only. No lines, no recommendations.</li>
+    </ol>
+  </section>
+
+  <section class="sheet" id="beyond">
+    <p class="label">Beyond free data <small>what the club's own feed would add</small></p>
+    <div class="grid grid-wide">
+      <div class="block">
+        <p>Everything above is built from one free file: a line per match, with each side's goals, shots and expected goals. It can say <em>how much</em> Luton create and concede. It cannot say <em>where from</em>, <em>who</em>, or <em>how the goalkeeper did</em> once the shot was struck.</p>
+        <p>The picture on the right is what the shot-level view looks like, drawn from StatsBomb's free sample of an older Premier League season. Every dot is a shot, sized by how good a chance it was, coloured if it went in. With Luton's own StatsBomb feed — the one the club's analysts already use — this page could show the same for every Luton match and every opponent, plus the post-shot xG that would settle the Keeley question one way or the other. Distance covered and sprint data would come from the club's Catapult vests, not from any data vendor.</p>
+        <p class="muted small">Prototype work lives in a separate folder, hatters-scout, and runs on the same code that would consume the club's data.</p>
+      </div>
+      <figure class="fig">
+        <figcaption><b>Shot map, sample data</b><span>Leicester City, Premier League 2015/16 — StatsBomb open data. Illustration of the view, not Luton.</span></figcaption>
+        <img class="sample" src="assets/cd87fda0717941fa.png" alt="Two half-pitch shot maps for Leicester City in the 2015/16 Premier League: shots for and shots against, dots sized by expected goals, goals in orange." width="2080" height="1152">
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  Hatters Briefing · compiled Sun 13 Sep 2026, fourth edition · all times UK<br>
+  Numbers from football-data.co.uk (E2, 2026–27), six league games, through <!-- block:DATA_DATE -->10 Sep 2026<!-- /block:DATA_DATE -->; the xG model is unattributed. Match reading via FotMob and Sofascore by eye, paraphrased. Beat reporting via Luton Today (match report, Hatters Rated ratings and Chris Powell's post-match remarks, all 11 Sep), lutontown.co.uk, Sky Sports for fixtures and PA. Beat sources and the fixture list were re-searched on 13 Sep; nothing had been published since Friday, and the analysis is unchanged from the third edition apart from the notes above. Sample shot map: StatsBomb open data.
+</footer>
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
+<script>
+(function () {
+  var tip = document.getElementById('tip');
+  function show(el, x, y) {
+    tip.textContent = el.getAttribute('data-tip');
+    tip.classList.add('on');
+    var w = tip.offsetWidth, h = tip.offsetHeight;
+    var left = Math.min(x + 14, window.innerWidth - w - 8), top = y - h - 12;
+    if (top < 8) top = y + 16;
+    tip.style.left = left + 'px'; tip.style.top = top + 'px';
+  }
+  function hide() { tip.classList.remove('on'); }
+  document.querySelectorAll('[data-tip]').forEach(function (el) {
+    el.addEventListener('pointermove', function (e) { show(el, e.clientX, e.clientY); });
+    el.addEventListener('pointerleave', hide);
+    el.addEventListener('focus', function () { var r = el.getBoundingClientRect(); show(el, r.left + r.width / 2, r.top); });
+    el.addEventListener('blur', hide);
+  });
+  var links = document.querySelectorAll('nav.top a');
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { links.forEach(function (a) { a.classList.remove('active'); }); var a = map[en.target.id]; if (a) a.classList.add('active'); }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('section.sheet').forEach(function (s) { io.observe(s); });
+  }
+})();
+</script>
+</body></html>
